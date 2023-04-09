@@ -21,10 +21,10 @@ def test_basic_priority_queueing():
             'linhas_do_arquivo': ['1', '2', '3', '4', '5', '6'],
         }
 
-        queue.enqueue(small_enought_to_be_a_priority)
         queue.enqueue(too_big_to_be_a_priority)
+        queue.enqueue(small_enought_to_be_a_priority)
 
-        assert queue.size() == 2
+        assert len(queue) == 2
 
         item0 = queue.search(0)
         assert item0['qtd_linhas'] == 4
