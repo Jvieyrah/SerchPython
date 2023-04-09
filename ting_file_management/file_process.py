@@ -7,9 +7,9 @@ def process(path_file, instance):
     for path in instance._queue:
         if path_file in path["nome_do_arquivo"]:
             return None
-    
+ 
     dict_path = {
-        "nome_do_arquivo": path_file, 
+        "nome_do_arquivo": path_file,
         "qtd_linhas": len(txt_importer(path_file)),
         "linhas_do_arquivo": txt_importer(path_file),
     }
